@@ -1,3 +1,11 @@
+/* 	=======================================
+	=======================================
+		ATTEMPTED STRETCHE(S):
+			- incoporate a gFont of 
+			your choice
+	=======================================
+	=======================================
+*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -134,14 +142,20 @@ html,
 body {
   height: 100%;
 }
-/*	================================================== My
-	================================================== CSS:
-	==================================================
+/*	============================ My
+	============================ CSS:
+	============================
 */
 * {
   border: 1px solid black;
 }
 @media (max-width: 500px) {
+  .disappear {
+    width: 0%;
+    height: 0%;
+  }
+}
+@media (max-width: 1000px) {
   .disappear {
     width: 0%;
     height: 0%;
@@ -153,11 +167,23 @@ body {
     height: 100%;
   }
 }
+@media (max-width: 1000px) {
+  .consume {
+    width: 100%;
+    height: 100%;
+  }
+}
 .drop {
   display: flex;
   flex-direction: column;
 }
 @media (max-width: 500px) {
+  .drop {
+    width: 0%;
+    height: 0%;
+  }
+}
+@media (max-width: 1000px) {
   .drop {
     width: 0%;
     height: 0%;
@@ -187,10 +213,20 @@ body {
     margin-right: 0%;
   }
 }
+@media (max-width: 1000px) {
+  .marginr15mm {
+    margin-right: 0%;
+  }
+}
 .marginl15 {
   margin-left: 15%;
 }
 @media (max-width: 500px) {
+  .marginl15mm {
+    margin-left: 0%;
+  }
+}
+@media (max-width: 1000px) {
   .marginl15mm {
     margin-left: 0%;
   }
@@ -289,6 +325,11 @@ section h2 {
     margin-right: 0%;
   }
 }
+@media (max-width: 1000px) {
+  section h2 {
+    margin-right: 0%;
+  }
+}
 section div {
   display: flex;
   justify-content: center;
@@ -299,6 +340,12 @@ section div {
   width: 50%;
 }
 @media (max-width: 500px) {
+  section div {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 1000px) {
   section div {
     width: 100%;
     height: 100%;
@@ -316,6 +363,12 @@ section div img {
     height: 0%;
   }
 }
+@media (max-width: 1000px) {
+  section div img {
+    width: 0%;
+    height: 0%;
+  }
+}
 section div p {
   padding: 5%;
   text-align: center;
@@ -327,10 +380,21 @@ section div p {
     margin-right: 0%;
   }
 }
+@media (max-width: 1000px) {
+  section div p {
+    margin-right: 0%;
+  }
+}
 .left {
   background-color: rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 500px) {
+  .left {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 1000px) {
   .left {
     width: 100%;
     height: 100%;
@@ -345,11 +409,21 @@ section div p {
     margin-left: 0%;
   }
 }
+@media (max-width: 1000px) {
+  .left h2 {
+    margin-left: 0%;
+  }
+}
 .left p {
   margin-left: 15%;
   padding: 3% 0 3% 0;
 }
 @media (max-width: 500px) {
+  .left p {
+    margin-left: 0%;
+  }
+}
+@media (max-width: 1000px) {
   .left p {
     margin-left: 0%;
   }
@@ -360,10 +434,22 @@ section div p {
     height: 0%;
   }
 }
+@media (max-width: 1000px) {
+  .left img {
+    width: 0%;
+    height: 0%;
+  }
+}
 .full {
   width: 80%;
 }
 @media (max-width: 500px) {
+  .full {
+    width: 0%;
+    height: 0%;
+  }
+}
+@media (max-width: 1000px) {
   .full {
     width: 0%;
     height: 0%;
