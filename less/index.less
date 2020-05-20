@@ -23,6 +23,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	// background-color: red;
+	// "delete" per readme
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -31,7 +33,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	// background-color: red;
 }
 ol, ul {
 	list-style: none;
@@ -58,3 +59,69 @@ html, body {
     height: 100%;
 }
 
+/*	================================================== My 
+	================================================== CSS: 
+	================================================== 
+*/
+
+* {
+	border: 1px solid black;
+}
+
+// MIXINS & stuff
+
+
+.width50(@width50:50%){
+	width: @width50;
+}
+.sqwh50(@sqwh50: 50%){
+	width: @sqwh50;
+	height: @sqwh50;
+}
+.border(@border:1px solid black){
+	border: @border;
+}
+.paddingTB(@paddingTB:3% 0 3% 0){
+	padding: @paddingTB;
+}
+.flex(@justify:center,@align:center,@flow:none){
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+	flex-flow: @flow;
+}
+
+// all together
+
+nav {
+	width: 100%;
+	.flex(@justify: space-around);
+	.border();
+	.paddingTB
+	// nav {
+	// 	font-size: 2rem;
+	// }
+}
+a {
+	.border();
+}
+header {
+	.flex(@justify: space-around);
+	flex-direction: column;
+	.border();
+	h1 {
+		text-align: center;
+		.width50();
+		.border();
+		font-family: 'Homemade Apple', cursive;
+		font-size: 2rem;
+	}
+	div {
+		.flex(@justify: space-between);
+		.border();
+	}
+	img {
+		.sqwh50();
+		.border();
+	}
+}
