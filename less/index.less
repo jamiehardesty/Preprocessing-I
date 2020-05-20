@@ -3,6 +3,11 @@
 		ATTEMPTED STRETCHE(S):
 			- incoporate a gFont of 
 			your choice
+
+		@tablet 
+			divs/sections drop their img
+		@mobile 
+			nav becomes a column
 	=======================================
 	=======================================
 */
@@ -128,6 +133,11 @@ html, body {
 }
 .paddingTB{
 	padding: 3% 0 3% 0;
+}
+.paddingTBmm{
+	@media @tablet {
+		padding: 0% 0 0% 0;
+	}
 }
 .padding5{
 	padding: @five;
@@ -274,6 +284,10 @@ section {
 	}
 	img {
 		.disappear();
+	}
+	
+	@media @tablet {
+		height: 50%;
 	}
 }
 .full {
