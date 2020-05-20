@@ -141,6 +141,28 @@ body {
 * {
   border: 1px solid black;
 }
+@media (max-width: 500px) {
+  .disappear {
+    width: 0%;
+    height: 0%;
+  }
+}
+@media (max-width: 500px) {
+  .consume {
+    width: 100%;
+    height: 100%;
+  }
+}
+.drop {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  .drop {
+    width: 0%;
+    height: 0%;
+  }
+}
 .width50 {
   width: 50%;
 }
@@ -160,8 +182,18 @@ body {
 .marginr15 {
   margin-right: 15%;
 }
+@media (max-width: 500px) {
+  .marginr15mm {
+    margin-right: 0%;
+  }
+}
 .marginl15 {
   margin-left: 15%;
+}
+@media (max-width: 500px) {
+  .marginl15mm {
+    margin-left: 0%;
+  }
 }
 .bcolor30 {
   background-color: rgba(0, 0, 0, 0.5);
@@ -182,12 +214,22 @@ nav {
   border: 0px solid black;
   padding: 3% 0 3% 0;
 }
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+  }
+}
 a {
   border: 0px solid black;
   text-decoration: none;
   color: red;
   width: 100%;
   text-align: center;
+}
+@media (max-width: 500px) {
+  a {
+    padding: 3% 0 3% 0;
+  }
 }
 a:hover {
   color: white;
@@ -242,6 +284,11 @@ section h2 {
   border-radius: 15%;
   border: 1px solid red;
 }
+@media (max-width: 500px) {
+  section h2 {
+    margin-right: 0%;
+  }
+}
 section div {
   display: flex;
   justify-content: center;
@@ -251,28 +298,76 @@ section div {
   border: 0px solid black;
   width: 50%;
 }
+@media (max-width: 500px) {
+  section div {
+    width: 100%;
+    height: 100%;
+  }
+}
 section div img {
   width: 60%;
   margin: 5%;
   border: 1px solid black;
   border-radius: 15%;
 }
+@media (max-width: 500px) {
+  section div img {
+    width: 0%;
+    height: 0%;
+  }
+}
 section div p {
   padding: 5%;
+  text-align: center;
   margin-right: 15%;
   font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  section div p {
+    margin-right: 0%;
+  }
 }
 .left {
   background-color: rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 500px) {
+  .left {
+    width: 100%;
+    height: 100%;
+  }
+}
 .left h2 {
   margin-left: 15%;
+  padding: 3% 0 3% 0;
+}
+@media (max-width: 500px) {
+  .left h2 {
+    margin-left: 0%;
+  }
 }
 .left p {
   margin-left: 15%;
+  padding: 3% 0 3% 0;
+}
+@media (max-width: 500px) {
+  .left p {
+    margin-left: 0%;
+  }
+}
+@media (max-width: 500px) {
+  .left img {
+    width: 0%;
+    height: 0%;
+  }
 }
 .full {
   width: 80%;
+}
+@media (max-width: 500px) {
+  .full {
+    width: 0%;
+    height: 0%;
+  }
 }
 footer {
   text-align: center;
