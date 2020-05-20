@@ -68,33 +68,37 @@ html, body {
 	border: 1px solid black;
 }
 
-// MIXINS & stuff
+// variables & nesting:
 
+@fiddy: 50%;
+@thirdy: 30%;
+@fifteen: 15%;
+@five: 5%;
 
-.width50(@width50:50%){
-	width: @width50;
+.width50{
+	width: @fiddy;
 }
-.sqwh50(@sqwh50: 30%){
-	width: @sqwh50;
-	height: @sqwh50;
+.sqwh50{
+	width: @thirdy;
+	height: @thirdy;
 }
-.border(@border:0px solid black){
-	border: @border;
+.border{
+	border: 0px solid black;
 }
-.paddingTB(@paddingTB:3% 0 3% 0){
-	padding: @paddingTB;
+.paddingTB{
+	padding: 3% 0 3% 0;
 }
-.padding5(@padding5:5%){
-	padding: @padding5;
+.padding5{
+	padding: @five;
 }
-.marginr15(@marginr15:15%){
-	margin-right: @marginr15;
+.marginr15{
+	margin-right: @fifteen;
 }
-.marginl15(@marginl15:15%){
-	margin-left: @marginl15;
+.marginl15{
+	margin-left: @fifteen;
 }
-.bcolor30(@bcolor30:rgba(0, 0, 0, 0.3)){
-	background-color: @bcolor30;
+.bcolor30{
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .flex(@justify:center,@align:center,@flow:none){
 	display: flex;
@@ -103,7 +107,7 @@ html, body {
 	flex-flow: @flow;
 }
 
-// all together
+// nesting & everything else
 
 body {
 	background: url("https://cdn.hipwallpaper.com/i/0/13/gDOsqY.jpg") no-repeat center center fixed;
@@ -152,7 +156,7 @@ header {
 	}
 	img {
 		.sqwh50();
-		.border();
+		border: 3px dotted red;
 		border-radius: 50%;
 	}
 }
@@ -166,9 +170,10 @@ section {
 		.border();
 		.padding5();
 		.marginr15();
-		background-image: url("https://media.giphy.com/media/bsRSKZhTXgDXa/giphy.gif");
-		background-size: 100%;
-		// font-size: 3rem;
+		background: url("https://media.giphy.com/media/bsRSKZhTXgDXa/giphy.gif") no-repeat center center fixed;
+		background-size: cover;
+		border-radius: 15%;
+		border: 1px solid red;
 	}
 	div {
 		.flex();
@@ -179,6 +184,7 @@ section {
 			width: 60%;
 			margin: 5%;
 			border: 1px solid black;
+			border-radius: 15%;
 		}
 		p {
 			.padding5();
@@ -196,6 +202,9 @@ section {
 	p {
 		.marginl15();
 	}
+}
+.full {
+	width: 80%;
 }
 footer {
 	text-align: center;
