@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -27,7 +27,7 @@ time, mark, audio, video {
 	// "delete" per readme
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -59,9 +59,9 @@ html, body {
     height: 100%;
 }
 
-/*	================================================== My 
-	================================================== CSS: 
-	================================================== 
+/*	================================================== My
+	================================================== CSS:
+	==================================================
 */
 
 * {
@@ -74,15 +74,27 @@ html, body {
 .width50(@width50:50%){
 	width: @width50;
 }
-.sqwh50(@sqwh50: 50%){
+.sqwh50(@sqwh50: 30%){
 	width: @sqwh50;
 	height: @sqwh50;
 }
-.border(@border:1px solid black){
+.border(@border:0px solid black){
 	border: @border;
 }
 .paddingTB(@paddingTB:3% 0 3% 0){
 	padding: @paddingTB;
+}
+.padding5(@padding5:5%){
+	padding: @padding5;
+}
+.marginr15(@marginr15:15%){
+	margin-right: @marginr15;
+}
+.marginl15(@marginl15:15%){
+	margin-left: @marginl15;
+}
+.bcolor30(@bcolor30:rgba(0, 0, 0, 0.3)){
+	background-color: @bcolor30;
 }
 .flex(@justify:center,@align:center,@flow:none){
 	display: flex;
@@ -93,6 +105,13 @@ html, body {
 
 // all together
 
+body {
+	background: url("https://cdn.hipwallpaper.com/i/0/13/gDOsqY.jpg") no-repeat center center fixed;
+	background-size: cover;
+	color: white;
+	font-family: 'Homemade Apple', cursive;
+	font-size: 2rem;
+}
 nav {
 	width: 100%;
 	.flex(@justify: space-around);
@@ -104,6 +123,15 @@ nav {
 }
 a {
 	.border();
+	text-decoration: none;
+	color: red;
+	width: 100%;
+	text-align: center;
+}
+a:hover {
+	color: white;
+	background-image: url("https://media.giphy.com/media/6wpHEQNjkd74Q/giphy.gif");
+	background-size: cover;
 }
 header {
 	.flex(@justify: space-around);
@@ -113,15 +141,63 @@ header {
 		text-align: center;
 		.width50();
 		.border();
-		font-family: 'Homemade Apple', cursive;
-		font-size: 2rem;
+
 	}
 	div {
-		.flex(@justify: space-between);
+		.flex(@justify: space-around);
 		.border();
+		.padding5();
+		.bcolor30();
+		width: 100%;
 	}
 	img {
 		.sqwh50();
 		.border();
+		border-radius: 50%;
 	}
+}
+section {
+	.flex(@justify: space-around);
+	.border();
+	.padding5();
+	h2 {
+		text-align: center;
+		.width50();
+		.border();
+		.padding5();
+		.marginr15();
+		background-image: url("https://media.giphy.com/media/bsRSKZhTXgDXa/giphy.gif");
+		background-size: 100%;
+		// font-size: 3rem;
+	}
+	div {
+		.flex();
+		flex-direction: column;
+		.border();
+		.width50();
+		img {
+			width: 60%;
+			margin: 5%;
+			border: 1px solid black;
+		}
+		p {
+			.padding5();
+			// text-align: justify;
+			.marginr15();
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	}
+}
+.left {
+	.bcolor30();
+	h2 {
+		.marginl15();
+	}
+	p {
+		.marginl15();
+	}
+}
+footer {
+	text-align: center;
+	.padding5();
 }
