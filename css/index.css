@@ -154,6 +154,22 @@ body {
 * {
   border: 1px solid black;
 }
+.drop {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  .drop {
+    width: 0%;
+    height: 0%;
+  }
+}
+@media (max-width: 1000px) {
+  .drop {
+    width: 0%;
+    height: 0%;
+  }
+}
 body {
   background: url("https://cdn.hipwallpaper.com/i/0/13/gDOsqY.jpg") no-repeat center center fixed;
   background-size: cover;
